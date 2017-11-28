@@ -13,3 +13,14 @@ target_link_libraries(zlib-example
   PUBLIC
     ZLIB::ZLIB
   )
+
+add_executable(cnpy-example cnpy-example.cpp cnpy.cpp)
+target_include_directories(cnpy-example
+  PUBLIC
+    ZLIB::ZLIB
+    ${PROJECT_SOURCE_DIR}
+  )
+target_link_libraries(cnpy-example
+  PUBLIC
+    ZLIB::ZLIB
+  )

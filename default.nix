@@ -9,12 +9,14 @@ let
 in
   with import nixpkgs {};
   stdenv.mkDerivation {
-    name = "zlib-example";
+    name = "zlib-example-dev";
     buildInputs = [
       ccache
+      clang-tools
       cmake
       exa
       gcc
+      valgrind
       zlib
     ];
   }
