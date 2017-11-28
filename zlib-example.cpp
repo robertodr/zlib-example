@@ -2,10 +2,13 @@
 #include <assert.h>
 #include <stdio.h>
 #include <string.h> // for strlen
+#include <sys/types.h>
+#include <unistd.h>
 
 // adapted from:
 // http://stackoverflow.com/questions/7540259/deflate-and-inflate-zlib-h-in-c
 int main(int argc, char *argv[]) {
+  printf("PID: %d\n", getpid());
   // original string len = 36
   char a[50] = "Hello Hello Hello Hello Hello Hello!";
 
